@@ -1,48 +1,75 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import Data from "./Data";
 
 import Card from "./Cards";
 
+// This is one way that we can create cards
 ReactDOM.render(
   <>
+    <h1 className="heading_style">List Of Top Web-Series</h1>
     <Card
-      imgsrc="https://images-na.ssl-images-amazon.com/images/I/71w8USjAGfL._RI_.jpg"
-      title="A Netflix original Series"
-      seriesname="Money Heist"
-      link="https://www.netflix.com/in/title/80192098"
+      imgsrc={Data[0].imgsrc}
+      seriesname={Data[0].seriesname}
+      title={Data[0].title}
+      link={Data[0].link}
     />
+
     <Card
-      imgsrc=" 
-          http://puui.qpic.cn/vcover_vt_pic/0/tfzx5m7vesn1tjv1566128206/0"
-      title="A Mx-Player Orignal Series"
-      seriesname="My Girlfriend Is Alien"
-      link="https://www.mxplayer.in/show/watch-my-girlfriend-is-an-alien-hindi-dubbed/season-1/episode-1-online-9d2013d31d5835bb8400e3b3c5e7bb72?utm_source=paid-ext-con-perf-google_sem-web&utm_medium=web&utm_campaign=sem-web-270921-traffic-nbr-web_series-Mix-INT_Shows-Hindi_Dubbed-ext_paid-na-na-pan-na-na-groupm-exact_sng&utm_cid=128088997616&gclid=Cj0KCQiArt6PBhCoARIsAMF5wag9vApvzZ_6SiEa-8eoymy9HTxfOB1sK5pQAP9V1RjRzwAvU1Hf5qAaAtwXEALw_wcB"
+      imgsrc={Data[1].imgsrc}
+      seriesname={Data[1].seriesname}
+      title={Data[1].title}
+      link={Data[1].link}
     />
+
     <Card
-      imgsrc="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRPT4dbNPCbzIbsIJVwhEbnLEN0fYUx_mdE55GU_zhaDL1xfQ8d"
-      title="A SonyLive Original Series"
-      seriesname="Scam 1992"
-      link="https://www.sonyliv.com/shows/scam-1992-the-harshad-mehta-story-1700000292"
+      imgsrc={Data[2].imgsrc}
+      seriesname={Data[2].seriesname}
+      title={Data[2].title}
+      link={Data[2].link}
     />
+
     <Card
-      imgsrc="https://m.media-amazon.com/images/M/MV5BNWRkMjA0NjItMmViYS00MDQyLTgyMWYtOWFmOTA4NmU5MjRjXkEyXkFqcGdeQXVyNDY4NjAxNTc@._V1_.jpg"
-      title="A TVF Original Series"
-      seriesname="Aspirants"
-      link="https://tvfplay.com/show/aspirants/707"
+      imgsrc={Data[3].imgsrc}
+      seriesname={Data[3].seriesname}
+      title={Data[3].title}
+      link={Data[3].link}
     />
+
     <Card
-      imgsrc="https://static.xemovie.com/images/Film/Series/KotaFacetorySeason2.jpg"
-      seriesname="A Kota Factory"
-      title="A Netflix Orignal Series"
-      link="https://www.netflix.com/in/title/80192098"
+      imgsrc={Data[4].imgsrc}
+      seriesname={Data[4].seriesname}
+      title={Data[4].title}
+      link={Data[4].link}
     />
+
     <Card
-      link="https://www.netflix.com/in/title/80115328"
-      seriesname="A Sacred Games"
-      title="A Netflix Orignal Series"
-      imgsrc="https://m.media-amazon.com/images/M/MV5BYTMzYTQ1NzAtOGY4OC00ZGM5LThiMmUtMzgzZjgzNzNjZjJmXkEyXkFqcGdeQXVyODk2ODI3MTU@._V1_.jpg"
+      imgsrc={Data[5].imgsrc}
+      seriesname={Data[5].seriesname}
+      title={Data[5].title}
+      link={Data[5].link}
     />
   </>,
   document.getElementById("root")
 );
+
+//This is second way that we can create cards by map function
+// function ncard(val) {
+//   return (
+//     <Card
+//       imgsrc={val.imgsrc}
+//       seriesname={val.seriesname}
+//       title={val.title}
+//       link={val.link}
+//     />
+//   );
+// }
+
+// ReactDOM.render(
+//   <>
+//     <h1 className="heading_style">List Of Top Web-Series</h1>
+//     {Data.map(ncard)}
+//   </>,
+//   document.getElementById("root")
+// );
